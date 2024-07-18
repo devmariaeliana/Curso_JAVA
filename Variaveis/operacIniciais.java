@@ -1,6 +1,6 @@
 package Variaveis;
 
-public class Operadores {
+public class operacIniciais {
   
 //incrementar e decrementar
   
