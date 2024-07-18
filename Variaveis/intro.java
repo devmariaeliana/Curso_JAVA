@@ -1,9 +1,11 @@
+package Variaveis;
+
 import java.time.LocalDateTime;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Locale;
 
-public class App {
+public class intro {
     public static void main(String[] args) {
 
     //Criação de variáveis com Strings e Valores númericos:
@@ -105,34 +107,39 @@ public class App {
         
         //Criar programação com saudação (Olá, {nome}! Hoje é {dia-da-semana}, BOM DIA!)
 
-        String nome = "José";
+       String nome = "José";
+       String saudacao = "a";
         
-        /*System.out.println(nome.toLowerCase());
-        System.out.println(nome.toUpperCase());
-        System.out.println(nome.length());
-        String nomeOutro = "josé";
-        System.out.println(nome.equals(nomeOutro));
-        System.out.println(nome.equalsIgnoreCase(nomeOutro));*/
+        //System.out.println(nome.toLowerCase());
+        //System.out.println(nome.toUpperCase());
+        //System.out.println(nome.length());
+        //String nomeOutro = "josé";
+        //System.out.println(nome.equals(nomeOutro));
+        //System.out.println(nome.equalsIgnoreCase(nomeOutro));
         
         LocalDate hoje = LocalDate.now();
+
         Locale brasil = new Locale( "pt", "BR");
 
-        System.out.println(hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, brasil));
-        String diaSemana = hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, brasil));
-        String saudacao;
+        String diaSemana = hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, brasil);
+
+        //System.out.println(hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, brasil));
+        
         LocalDateTime agora = LocalDateTime.now();
 
-        if (agora.getHour() >= 8 && agora.getHour() < 12) {
-            saudacao = "Bom dia";
+        if (agora.getHour() >= 1 && agora.getHour() < 12) {
+            saudacao = "Bom dia!";
+        }     
 
-        } else if (agora.getHour() >= 12 && agora.getHour() < 18){
-            saudacao = "Boa Tarde";
+        if (agora.getHour() >= 12 && agora.getHour() < 18){
+            saudacao = "Boa Tarde!";
+
+        } else if (agora.getHour() >= 18 && agora.getHour() < 24){
+                saudacao = "Boa Noite!";
+
         }
-        
-
-
-
-
+            System.out.printf("Olá, "+nome+"! "+saudacao+" Hoje é "+hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, brasil));
+        }
+      
 
     }
-}
